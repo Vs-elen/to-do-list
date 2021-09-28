@@ -36,6 +36,7 @@ li {
     justify-content: space-between;
     font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
     border-bottom: 1px solid #ccc;
+    cursor: move;
 }
 
 
@@ -95,6 +96,10 @@ li span:hover {
 
 .checked {
     text-decoration: line-through;
+}
+
+.selected {
+    opacity: 0.6;
 }
 
 

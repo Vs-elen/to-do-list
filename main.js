@@ -1,7 +1,9 @@
+import {dragndrop} from "./scripts/dragndrop.js";
+
 let list = document.querySelector('#task-list');
 let inputValue = document.querySelector('#input-task');
 let checkbox = document.querySelector('.content__checkbox')
-let listIt = document.querySelector('li')
+let listIts = document.querySelectorAll('li')
 
 let taskList = [];
 
@@ -42,6 +44,8 @@ function renderTodos(taskList) {
 
 
         li.setAttribute('data-key', item.id);
+        li.classList.add(`tasks__item`)
+        li.draggable = true;
         if (item.completed === true) {
             span.classList.add('checked');
         }
@@ -89,6 +93,10 @@ function deleteTodo(id) {
     // update the localStorage
     addToLocalStorage(taskList);
 }
+
+
+
+dragndrop(list);
 
 
 getFromLocalStorage();
