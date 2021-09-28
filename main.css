@@ -1,0 +1,102 @@
+@import "./styles/input.css";
+@import "./styles/button.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 100px;
+    /*background: linear-gradient(#00ff00, #ff1493);*/
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+#task-list {
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin: 0 auto;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+li span {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000;
+    max-width: 600px;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li span:hover {
+    font-size: 25px;
+}
+
+.content__checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.delete-btn {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    box-shadow:inset 0px 33px 0px -24px #e67a73;
+    background-color:#e4685d;
+    border: none;
+    border-radius: 50%;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+.delete-btn:before, .delete-btn:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #000;
+}
+.delete-btn:before {
+    transform: rotate(45deg);
+}
+.delete-btn:after {
+    transform: rotate(-45deg);
+}
+
+
+.checked {
+    text-decoration: line-through;
+}
+
+
+
+
